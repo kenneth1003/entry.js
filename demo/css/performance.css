@@ -1,0 +1,31 @@
+.box {
+  margin-top: 50px;
+  max-width: 1200px;
+}
+.sub-box {
+  width: 16.66%;
+}
+.desc {
+  padding: 20px;
+}
+.info-panel {
+  background-color: #191938;
+  color: #18fefe;
+  display: inline-block;
+  font-size: 14px;
+  line-height: 1.5;
+  padding: 13px 13px 0;
+  height: 35px;
+  position: fixed;
+  top: 0;
+  left: 80px;
+  z-index: 1;
+}
+.theshold {
+  bottom: 400px;
+}
+@media (max-width: 1000px) {
+  .sub-box {
+    width: 33.33%;
+  }
+}

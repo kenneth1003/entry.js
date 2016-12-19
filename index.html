@@ -4,104 +4,67 @@
   <meta charset="UTF-8">
   <title>Document</title>
   <style>
+    html, body {
+      padding: 0;
+      margin: 0;
+    }
+    body {
+      font-family: Arial;
+      padding: 30px;;
+    }
     div {
-      height: 500px;
-      border: 2px solid #aaa;
-      margin-top: 10px;
       background-color: #f5f5f5;
+      border: 2px solid #aaa;
+      box-sizing: border-box;
+      font-size: 36px;
+      height: 500px;
+      position: relative;
+      margin-bottom: 30px;
+      text-align: center;
     }
-    .entryjs {
-      opacity: 0;
-      transform: translateX(-50px);
-      transition: all .5s;
-    }
-    .entryjs.entryjs-no-translate{
-      transform: translate(0px);
-    }
-    .entryjs.entryjs-right{
-      transform: translateX(50px);
-    }
-    .entryjs.entryjs-top{
-      transform: translateY(-50px);
-    }
-    .entryjs.entryjs-bottom{
-      transform: translateY(50px);
-    }
-    .entryjs.entryjs-active {
-      opacity: 1 !important;
-      transform: translate(0) rotate(0deg) scale(1) !important;
+    span {
+      display: inline-block;
+      margin-top: -21px;
+      position: absolute;
+      top: 50%;
     }
   </style>
+  <link type="text/css" rel="stylesheet" href="/dist/css/entry.css" />
+  <script type="text/javascript" src="/dist/js/entry.js"></script>
 </head>
+
 <body>
-  <div class="entryjs entryjs-bottom">1</div>
-  <div class="entryjs entryjs-right">2</div>
-  <div class="entryjs entryjs-bottom">3</div>
-  <div class="entryjs entryjs-top">4</div>
-  <div class="entryjs entryjs-right">5</div>
-  <div class="entryjs entryjs-no-translate">6</div>
-  <div class="entryjs entryjs-left" data-entryjs-delay="5000">7</div>
+  <div class="entryjs entryjs-bottom">
+    <span>A</span>
+  </div>
+
+  <div class="entryjs entryjs-right">
+    <span>B</span>
+  </div>
+
+  <div class="entryjs entryjs-bottom">
+    <span>C</span>
+  </div>
+
+  <div class="entryjs entryjs-top">
+    <span>D</span>
+  </div>
+
+  <div class="entryjs entryjs-right">
+    <span>E</span>
+  </div>
+
+  <div class="entryjs entryjs-no-translate">
+    <span>F</span>
+  </div>
+
+  <div class="entryjs entryjs-left" data-entryjs-delay="1000">
+    <span>G</span>
+  </div>
 </body>
+
 <script type="text/javascript">
-  var Entry = function(config) {
-    var checkNext   = true, 
-        elemsToShow = [],
-        offset      = (config && config.offset) ? config.offset : -200,
-        duration    = (config && config.duration) ? config.duration : '.5',
-        transition  = 'all ' + duration + 's';
-
-    Entry.prototype.init = function() {
-      offset += window.innerHeight;
-      _initElemsToShow();
-      elemsToShow.sort(_compare);
-      window.addEventListener('scroll', _handleScroll);
-      _handleScroll();
-    }
-
-    function _initElemsToShow() {
-      var doms = document.querySelectorAll('.entryjs');
-      doms.forEach(function(elem){
-        elem.style.transition = transition;
-        elemsToShow.push({
-          dom: elem,
-          position: elem.offsetTop
-        })
-      });
-    }
-    function _handleScroll() {
-      checkNext = true;
-      for(i = elemsToShow.length - 1; i >= 0; i--) {
-        _checkPosition(elemsToShow[i], offset, i);
-        if (!checkNext) break;
-      }
-      if (!elemsToShow.length) {
-        window.removeEventListener('scroll', _handleScroll);
-      } 
-    }
-    function _handleElemActive(elem) {
-      var _elem = elem.dom,
-          attr = _elem.getAttribute('data-entryjs-delay');
-      if (attr) {
-        setTimeout(_elem.classList.add.bind(_elem.classList, 'entryjs-active'), attr)
-      } else {
-        elem.dom.classList.add('entryjs-active');
-      }
-    }
-    function _compare(a, b) {
-      return b.position - a.position;
-    }
-    function _checkPosition(elem, offset, idx) {
-      if(window.scrollY + offset > elem.position) {
-        _handleElemActive(elem);
-        elemsToShow.splice(idx, 1);
-      } else {
-        checkNext = false;
-      }
-    }
-  }
-  var entry = new Entry({
-    duration: .6
-  });
+  var entry = new Entry();
   entry.init();
 </script>
 </html>

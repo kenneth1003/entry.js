@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Entry.js advance Demo</title>
+  <link type="text/css" rel="stylesheet" href="./css/entry.css" />
+  <link type="text/css" rel="stylesheet" href="./css/style.css" />
+  <link type="text/css" rel="stylesheet" href="./css/performance.css" />
+ 
+
+  <script type="text/javascript" src="//rawgit.com/mrdoob/stats.js/master/build/stats.min.js"></script>
+  <script type="text/javascript" src="./js/entry.js"></script>
+</head>
+
+<body>
+  <div class="info-panel">
+    <span>
+      entryjs-init-time(ms):
+      <span id="init-time"></span>
+    </span>
+  </div>
+  <div class="psr">
+    <div class="box" id="container">
+    <p>
+      I think the performance we care the most are <span class="emphasis">FPS</span> and <span class="emphasis">init time</span>,
+      <br/>
+      here is the test with these two benchmarks at the top-left corner for <span class="emphasis">100 entryjs elements</span>
+      <br/>
+      － <span class="emphasis">FPS:</span> using <a href="https://github.com/mrdoob/stats.js/" target="_blank">State.js </a>
+      <br/>
+      － <span class="emphasis">init-time:</span> using timestamp before and after entry.init()
+      <br/>
+    </p>
+      
+      <!-- insert 100 elements in Javascript -->
+
+    </div>
+  </div>
+  <div class="theshold"></div>
+</body>
+
+<script type="text/javascript">
+  // init State.js
+  var stats = new Stats();document.body.appendChild(stats.dom);
+  requestAnimationFrame(function loop(){stats.update();requestAnimationFrame(loop)});
+
+  var initTime      = document.getElementById('init-time'),
+      container     = document.getElementById('container'),
+      elementCounts = parseInt(location.hash.slice(1)) || 100,
+      direction     = ['top', 'right', 'bottom', 'left'],
+      entry;
+  // append elements
+  for (i = 0; i < elementCounts; i++) {
+    var random = Math.floor(Math.random() * 4);
+    container.append(elemTemplate(direction[random]));
+  }
+
+  entry = new Entry({ offset: 400 });
+  // for init time test
+  var start  = new Date().getTime();
+  entry.init();
+  panelInit();
+
+  function panelInit() {
+    initTime.innerHTML = new Date().getTime() - start;
+  }
+  
+  function elemTemplate(direction) {
+    var subBox      = document.createElement('div'),
+        placeholder = document.createElement('div'),
+        entryElem   = document.createElement('div'),
+        desc        = document.createElement('div');
+    subBox.classList.add('sub-box');
+    placeholder.classList.add('placeholder');
+    entryElem.classList.add('entryjs');
+    entryElem.classList.add('entryjs-' + direction);
+    desc.classList.add('desc');
+
+    subBox.appendChild(placeholder);
+    desc.append('Element');
+    entryElem.appendChild(desc);
+    subBox.appendChild(entryElem);
+    return subBox;
+  }
+</script>
+</html>

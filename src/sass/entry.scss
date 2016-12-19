@@ -1,0 +1,21 @@
+.entryjs {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all .5s;
+}
+.entryjs.entryjs-no-translate{
+  transform: translate(0px);
+}
+.entryjs.entryjs-right{
+  transform: translateX(50px);
+}
+.entryjs.entryjs-top{
+  transform: translateY(-50px);
+}
+.entryjs.entryjs-bottom{
+  transform: translateY(50px);
+}
+.entryjs.entryjs-active {
+  opacity: 1 !important;
+  transform: translate(0) rotate(0deg) scale(1) !important;
+}

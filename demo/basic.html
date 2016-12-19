@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Entry.js basic Demo</title>
+  <link type="text/css" rel="stylesheet" href="./css/entry.css" />
+  <link type="text/css" rel="stylesheet" href="./css/style.css" />
+  <script type="text/javascript" src="./js/entry.js"></script>
+</head>
+
+<body>
+  <div class="box">
+    <p>
+      After add the <span class="emphasis">entry.js</span> and <span class="emphasis">entry.css</span> in you project, 
+      <br/>
+      add <span class="emphasis">"entryjs"</span> in the classlist of the element, 
+      <br /> 
+      and the following in the Javascript, 
+      <br />
+      <pre>
+        var foo = new Entry();
+        foo.init();  <span style="color:green">// execute after document on ready</span></pre>
+      then you are good to go :)
+    </p>
+  </div>
+
+  <div class="box">
+    <p>If you want element enters from <span class="emphasis">different direction</span>, (defalut is left)
+    <br />
+    add an extra <span class="emphasis">"entryjs-{direction}"</span> class. 
+    <br />
+    <br />
+    ex: <span class="emphasis">"entryjs-right"</span>, <span class="emphasis">"entryjs-top"</span></p>
+  </div>
+
+  <div class="box entryjs">
+    <p>
+      I have class <span class="emphasis">"entryjs"</span>
+    </p>
+  </div>
+
+  <div class="box entryjs entryjs-bottom">
+    <p>
+      I have classes <span class="emphasis">"entryjs entryjs-bottom"</span>
+    </p>
+  </div>
+
+  <div class="box entryjs entryjs-top">
+    <p>
+      I have classes <span class="emphasis">"entryjs entryjs-top"</span>
+    </p>
+  </div>
+
+  <div class="box entryjs entryjs-right">
+    <p>
+      I have classes <span class="emphasis">"entryjs entryjs-right"</span>
+    </p>
+  </div>
+
+</body>
+
+<script type="text/javascript">
+  var entry = new Entry();
+  entry.init();
+</script>
+</html>

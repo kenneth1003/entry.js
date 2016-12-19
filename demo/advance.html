@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Entry.js advance Demo</title>
+  <link type="text/css" rel="stylesheet" href="./css/entry.css" />
+  <link type="text/css" rel="stylesheet" href="./css/style.css" />
+  <script type="text/javascript" src="./js/entry.js"></script>
+</head>
+
+<body>
+  <div class="box entryjs">
+    <p>
+      You can <span class="emphasis">config Entry</span>, like following
+      <br />
+      <pre>
+        var foo = new Entry({
+          offset: 420,  <span style="color: green">// in pixel, showing theshold from bottom, default is 200</span>
+          duration: 2, <span style="color: green"> // in second, transition time, default is .5</span>
+        });
+        foo.init();</pre>
+    </p>
+  </div>
+  
+  <div class="psr">
+    <div class="placeholder placeholder-b"></div>
+    <div class="box entryjs">
+      <p>
+        You can also set <span class="emphasis">delay time</span> of showing in the html attribute like:
+        <pre>
+          <span style="color: #999">&lt;div class="entryjs"</span> data-entryjs-delay="1000" <span style="color: #999"><span style="color: green">// in millisecond </span>...</span> </span></pre>
+      </p>
+      <div class="sub-box">
+        <div class="placeholder"></div>
+        <div class="entryjs entryjs-left">
+          <div class="desc">
+            no data-entryjs-delay
+          </div>
+        </div>
+      </div>
+      <div class="sub-box">
+        <div class="placeholder"></div>
+        <div class="entryjs entryjs-right" data-entryjs-delay="500">
+          <div class="desc">
+            data-entryjs-delay="500"
+          </div>
+        </div>
+      </div>
+      <div class="sub-box">
+        <div class="placeholder"></div>
+        <div class="entryjs entryjs-bottom" data-entryjs-delay="1500">
+          <div class="desc">
+            data-entryjs-delay="1500"
+          </div>
+        </div>
+      </div>
+      <div class="sub-box">
+        <div class="placeholder"></div>
+        <div class="entryjs entryjs-top" data-entryjs-delay="2000">
+          <div class="desc">
+            data-entryjs-delay="2000"
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="theshold"></div>
+</body>
+
+<script type="text/javascript">
+  var entry = new Entry({
+          offset: 420,
+          duration: 2, // second
+        });
+  entry.init();
+</script>
+</html>
