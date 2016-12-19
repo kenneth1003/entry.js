@@ -2,22 +2,22 @@
 A light weight frontend plugin for show elements with scorll event
 
 ## Getting Started
-
-```
-// your .html
-
+Your html
+```html
 <link rel="stylesheet" href="/css/entry.css?k0912">
 <script src="/javascript/entry.min.js"></script>
 
-// element
+<!-- element -->
 <div class="entryjs">
-
+```
+Your js
+```js
 // you .js
  var foo = new Entry();
  foo.init();  // execute after document ready
- 
 ```
 
+[DEMO](https://github.com/kenneth1003)
 
 ## Build
 for minify js and css, form '/src' to '/dist'
