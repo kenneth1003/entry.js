@@ -1,5 +1,5 @@
 # entry.js
-light weight frontend plugin
+A light weight frontend plugin for show elements with scorll event
 
 ## Getting Started
 
@@ -14,19 +14,18 @@ light weight frontend plugin
 
 // you .js
  var foo = new Entry();
- foo.init();  // execute after document on ready
+ foo.init();  // execute after document ready
  
 ```
 
-### Development
 
 ## Build
-for minify js and css
+for minify js and css, form '/src' to '/dist'
 ```
 ~$ gulp
 ```
 
-### Coding style
+## Coding style
 
 1. single qout
 2. two spaces indent
@@ -34,7 +33,7 @@ for minify js and css
 
 ## Authors
 
-* **kenneth1003** - *Initial work* - [PurpleBooth](https://github.com/kenneth1003)
+*  - *Initial work* - [kenneth1003](https://github.com/kenneth1003)
 
 ## License
 
