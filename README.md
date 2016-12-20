@@ -22,7 +22,7 @@ Javascript
  foo.init();  // execute after document ready
 ```
 
-[DEMO](https://github.com/kenneth1003/entry.js/demo)
+[DEMO](https://github.com/kenneth1003/entry.js/tree/master/demo)
 
 ## Build
 for minify js and css, from '/src' to '/dist'.
