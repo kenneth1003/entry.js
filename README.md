@@ -1,13 +1,21 @@
 # entry.js
-A light weight frontend plugin for show elements with scorll event
+A light weight frontend plugin for showing elements with scroll event. 
+```
+
+"when it comes to web animation, transform and opacity are good friends"  -  By Paul Lewis 
+
+```
+Transform and opacity do not trigger any geometry changes, **entry.js** take advantage of them to make a smooth animation for element scroll entry.
 
 ## Getting Started
 Your html
 ```html
-<link rel="stylesheet" href="/css/entry.css?k0912">
+<link rel="stylesheet" href="/css/entry.css">
 <script src="/javascript/entry.min.js"></script>
 
-<!-- element -->
+<!-- ... -->
+
+<!-- element you want to apply -->
 <div class="entryjs">
 ```
 Your js
@@ -20,7 +28,7 @@ Your js
 [DEMO](https://github.com/kenneth1003)
 
 ## Build
-for minify js and css, form '/src' to '/dist'
+for minify js and css, from '/src' to '/dist'
 ```
 ~$ gulp
 ```
@@ -31,11 +39,8 @@ for minify js and css, form '/src' to '/dist'
 2. two spaces indent
 3. private method begin with '_'
 
-## Authors
+### Authors
 
-*  - *Initial work* - [kenneth1003](https://github.com/kenneth1003)
+- *Initial work* - [kenneth1003](https://github.com/kenneth1003)
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
