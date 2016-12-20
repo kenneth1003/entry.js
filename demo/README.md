@@ -6,6 +6,7 @@ var foo = new Entry();
 foo.init();  // execute after document on ready
 ```
 then you are good to go :)
+[Page](https://kenneth1003.github.io/demo/entry.js/basic.html)
 
 # Advance
 Learn more config for entryjs <br/><br/>
@@ -17,9 +18,11 @@ var foo = new Entry({
 });
 foo.init();      // execute after document on ready
 ```
+[Page](https://kenneth1003.github.io/demo/entry.js/advance.html)
 
 # Performance Test
 A closer look of the FPS and init-time for entryjs
+[Page](https://kenneth1003.github.io/demo/entry.js/performance_test.html)
 
 ## Notice
 The element performing scroll entry should not have its own translate and opacity style, otherwise it could be overwritten or overwrite the style of entry.js
