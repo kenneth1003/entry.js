@@ -32,7 +32,7 @@ for minify js and css, from '/src' to '/dist'.
 
 ## Coding style
 
-1. single qout.
+1. single qoute.
 2. two spaces indent.
 3. private method begin with '_'.
 
