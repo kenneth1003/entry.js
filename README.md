@@ -25,7 +25,7 @@ Javascript
 [DEMO](https://github.com/kenneth1003/entry.js/tree/master/demo)
 
 ## Build
-For minify js and css, from '/src' to '/dist'.
+For minify js, css from '/src' to '/dist' as well as possible future code expanding, 
 ```
 ~$ gulp
 ```
