@@ -25,7 +25,7 @@ Javascript
 [DEMO](https://github.com/kenneth1003/entry.js/tree/master/demo)
 
 ## Build
-for minify js and css, from '/src' to '/dist'.
+For minify js and css, from '/src' to '/dist'.
 ```
 ~$ gulp
 ```
@@ -34,6 +34,7 @@ for minify js and css, from '/src' to '/dist'.
 
 Following a simple eslint rules and private method begin with '_'.
 ```
+// .eslint.js
 "rules": {
   "quotes": [
     "warn",
@@ -49,6 +50,6 @@ Following a simple eslint rules and private method begin with '_'.
 
 ### Authors
 
-*Initial work* [kenneth1003](https://github.com/kenneth1003)
+*Initial work* - [kenneth1003](https://github.com/kenneth1003)
 
 
