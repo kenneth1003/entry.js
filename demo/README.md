@@ -18,7 +18,6 @@ var foo = new Entry({
 });
 foo.init();      // execute after document on ready
 ```
-[Page](https://kenneth1003.github.io/demo/entry.js/advance.html)
 
 # Performance Test
 A closer look of the FPS and init-time for entryjs. [Page](https://kenneth1003.github.io/demo/entry.js/performance_test.html)
