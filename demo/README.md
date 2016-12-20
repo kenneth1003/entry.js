@@ -1,7 +1,4 @@
-# DEMO
-One Paragraph of project description goes here
-
-## Basic
+# Basic
 A hello world example for entryjs. <br/><br/>
 After adding the **entry.js** and **entry.css** in you project, add **"entryjs"** in the classlist of the element, and the following in the Javascript, 
 ```js
@@ -10,7 +7,7 @@ foo.init();  // execute after document on ready
 ```
 then you are good to go :)
 
-## Advance
+# Advance
 Learn more config for entryjs <br/><br/>
 You can **config Entry**, as following
 ```js
@@ -21,7 +18,7 @@ var foo = new Entry({
 foo.init();      // execute after document on ready
 ```
 
-## Performance Test
+# Performance Test
 A closer look of the FPS and init-time for entryjs
 
 ## Notice
