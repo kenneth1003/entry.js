@@ -47,6 +47,14 @@ Following a simple eslint rules and private method begin with '_'.
 }
 ```
 
+## Browser support
+
+IE >9 <br/>
+Edge >12 <br/>
+Chrome >4 <br/>
+Firefox >3.5 <br/>
+Safari >3.1 <br/>
+Opera >11.5
 
 ### Authors
 
