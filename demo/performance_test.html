@@ -6,8 +6,7 @@
   <link type="text/css" rel="stylesheet" href="./css/entry.css" />
   <link type="text/css" rel="stylesheet" href="./css/style.css" />
   <link type="text/css" rel="stylesheet" href="./css/performance.css" />
- 
-
+  
   <script type="text/javascript" src="//rawgit.com/mrdoob/stats.js/master/build/stats.min.js"></script>
   <script type="text/javascript" src="./js/entry.js"></script>
 </head>
@@ -47,15 +46,15 @@
   var initTime      = document.getElementById('init-time'),
       container     = document.getElementById('container'),
       elementCounts = parseInt(location.hash.slice(1)) || 100,
-      direction     = ['top', 'right', 'bottom', 'left'],
+      direction     = ['top', 'right', 'bottom', 'left', ''],
       entry;
   // append elements
   for (i = 0; i < elementCounts; i++) {
-    var random = Math.floor(Math.random() * 4);
+    var random = Math.floor(Math.random() * 5);
     container.append(elemTemplate(direction[random]));
   }
 
-  entry = new Entry({ offset: 400 });
+  entry = new Entry({ theshold: 400 });
   // for init time test
   var start  = new Date().getTime();
   entry.init();

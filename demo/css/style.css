@@ -7,6 +7,13 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   padding: 30px 30px 200px;
 }
+pre {
+  background-color: #e5e5e5;
+  color: #111;
+  line-height: 1.5;
+  padding: 20px 0;
+  
+}
 .box {
   background-color: #f9f9f9;
   box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
@@ -27,13 +34,6 @@ body {
   content: " ";
   clear: both;
   height: 0;
-}
-pre {
-  background-color: #e5e5e5;
-  color: #111;
-  line-height: 1.5;
-  padding: 20px 0;
-  
 }
 .emphasis {
   color: green;

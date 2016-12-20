@@ -11,11 +11,11 @@
 <body>
   <div class="box entryjs">
     <p>
-      You can <span class="emphasis">config Entry</span>, like following
+      You can <span class="emphasis">config Entry</span>, as following
       <br />
       <pre>
         var foo = new Entry({
-          offset: 420,  <span style="color: green">// in pixel, showing theshold from bottom, default is 200</span>
+          theshold: 420,  <span style="color: green">// in pixel, showing theshold from bottom, default is 200</span>
           duration: 2, <span style="color: green"> // in second, transition time, default is .5</span>
         });
         foo.init();</pre>
@@ -70,7 +70,7 @@
 
 <script type="text/javascript">
   var entry = new Entry({
-          offset: 420,
+          theshold: 420,
           duration: 2, // second
         });
   entry.init();

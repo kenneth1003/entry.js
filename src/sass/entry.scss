@@ -1,10 +1,13 @@
 .entryjs {
   opacity: 0;
-  transform: translateX(-50px);
-  transition: all .5s;
+  transition: transform .5s, opacity .5s;
 }
-.entryjs.entryjs-no-translate{
-  transform: translate(0px);
+
+.entryjs.entryjs-no-opacity{
+  opacity: 1;
+}
+.entryjs.entryjs-left{
+  transform: translateX(-50px);
 }
 .entryjs.entryjs-right{
   transform: translateX(50px);
