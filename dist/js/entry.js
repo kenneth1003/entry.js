@@ -2,7 +2,7 @@ var Entry = function(config) {
   var checkNext     = true, 
       elemsToShow   = [],
       windowScrollY = 0,
-      theshold        = (config && config.theshold) ? config.theshold : 200,
+      theshold      = (config && config.theshold) ? config.theshold : 200,
       duration      = (config && config.duration) ? config.duration : '.5',
       transition    = 'all ' + duration + 's';
 
@@ -19,6 +19,7 @@ var Entry = function(config) {
     var doms = document.querySelectorAll('.entryjs');
         windowScrollY = window.scrollY;
     doms.forEach(function(elem){
+// standardize position for element with translateY 
       var yOffset = _getComputedTranslateY(elem) || 0;
       elem.style.transition = transition;
       elemsToShow.push({
@@ -31,6 +32,7 @@ var Entry = function(config) {
   function _handleScroll() {
     windowScrollY = window.scrollY;
     checkNext = true;
+// the reason for reverse order is preventing "splice" method effect the loop element order
     for(var i = elemsToShow.length - 1; i >= 0; i--) {
       _checkPosition(windowScrollY, elemsToShow[i], i);
       if (!checkNext) break;
@@ -40,6 +42,7 @@ var Entry = function(config) {
     } 
   }
   function _handleResize() {
+// recalculate the element position when resizing
     elemsToShow.forEach(function(elem){
       var newPos = elem.dom.getClientRects()[0].top + windowScrollY + theshold - elem.yOffset;
       elem.position = newPos;
