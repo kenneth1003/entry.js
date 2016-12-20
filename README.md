@@ -25,16 +25,16 @@ Your js
 [DEMO](https://github.com/kenneth1003)
 
 ## Build
-for minify js and css, from '/src' to '/dist'
+for minify js and css, from '/src' to '/dist'.
 ```
 ~$ gulp
 ```
 
 ## Coding style
 
-1. single qout
-2. two spaces indent
-3. private method begin with '_'
+1. single qout.
+2. two spaces indent.
+3. private method begin with '_'.
 
 ### Authors
 
