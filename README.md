@@ -32,12 +32,23 @@ for minify js and css, from '/src' to '/dist'.
 
 ## Coding style
 
-1. single qoute.
-2. two spaces indent.
-3. private method begin with '_'.
+Following a simple eslint rules and private method begin with '_'.
+```
+"rules": {
+  "quotes": [
+    "warn",
+    "single"
+  ],
+  "semi": [
+    "warn",
+    "always"
+  ]
+}
+```
+
 
 ### Authors
 
-- *Initial work* - [kenneth1003](https://github.com/kenneth1003)
+*Initial work* [kenneth1003](https://github.com/kenneth1003)
 
 
