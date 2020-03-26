@@ -26,7 +26,7 @@ Transform and opacity do not trigger any geometry changes, **entry.js** takes ad
  foo.init();  // execute after document ready
 ```
 
-[DEMO](https://github.com/kenneth1003/entry.js/tree/master/demo) <br/><br/>
+[DEMO](https://kenneth1003.github.io/entryjs/demo/basic.html) <br/><br/>
 
 **entry.min.css:**
 ```css
